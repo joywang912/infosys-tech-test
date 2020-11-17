@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Button = styled.button`
-  ine-height: 1.5715;
+  width: 100%;
   position: relative;
   display: inline-block;
   white-space: nowrap;

@@ -5,8 +5,14 @@ import { DangerButton } from "../components/Button";
 const PinDisplayPage = () => {
   return (
     <div>
-      <Input readOnly size={4} />
-      <DangerButton>Delete</DangerButton>
+      <div className="row">
+        <div className="col">
+          <Input readOnly size={4} />
+        </div>
+        <div className="col">
+          <DangerButton>Delete</DangerButton>
+        </div>
+      </div>
     </div>
   );
 };
