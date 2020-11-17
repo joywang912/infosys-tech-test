@@ -71,5 +71,5 @@ export const getPinList = () => {
     }
     return pinList.push(pinNew);
   });
-  return pinList;
+  return pinList.map((el) => el.join(""));
 };
