@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import "./App.css";
 import styled from "styled-components";
+import Link from "./components/Link";
+import PinGeneratePage from "./pages/PinGeneratePage";
+import PinDisplayPage from "./pages/PinDisplayPage";
 
 interface NavLinkProps {
   active: boolean;
@@ -15,22 +18,6 @@ const Nav = styled.nav`
   flex-wrap: wrap;
   padding-left: 0;
   margin-bottom: 0;
-`;
-
-const Link = styled.a`
-  display: block;
-  padding: 5px 10px;
-  text-decoration: none;
-
-  &:focus,
-  &:visited {
-    color: #000000;
-    outline: none;
-  }
-
-  &:hover {
-    color: #0056b3;
-  }
 `;
 
 const NavLink = styled(Link)<NavLinkProps>`
@@ -66,9 +53,13 @@ function App() {
         </NavLink>
       </Nav>
       <div>
-        <Panel active={!!(activePage === 1)}>Generate</Panel>
+        <Panel active={!!(activePage === 1)}>
+          <PinGeneratePage />
+        </Panel>
 
-        <Panel active={!!(activePage === 2)}>Saved</Panel>
+        <Panel active={!!(activePage === 2)}>
+          <PinDisplayPage />
+        </Panel>
       </div>
     </div>
   );
